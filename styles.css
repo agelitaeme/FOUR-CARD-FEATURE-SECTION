@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+--teambuilder: hsl(0, 78%, 62%);
+--supervisor: hsl(180, 62%, 55%);
+--karma: hsl(34, 97%, 64%);
+--calculator: hsl(212, 86%, 64%);
+--bg: hsl(0, 0%, 98%);
+--gray: hsl(229, 6%, 66%);
+--darkgray: hsl(234, 12%, 34%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+header {
+    width: min(500px, 77vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+header h2 {
+    font-weight: 200;
+    font-size: 2.2rem;
+    color: var(--darkgray);
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: var(--darkgray);
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    margin: 40px;
+}
+
+.card {
+    max-width: 320px;
+    height: 220px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 0 10px 50px -15px hsla(234, 12%, 34%, 0.374);
+    transition: all ease-in-out 300ms;
+}
+
+.card:hover {
+    transform: scale(0.96);
+    box-shadow: 0 10px 30px -15px hsla(234, 12%, 34%, 0.374);
+    transition: all ease-in-out 300ms;
+}
+
+.card h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--darkgray);
+    margin-bottom: -30px;
+}
+
+.card img {
+    align-self: flex-end;
+    width: 65px;
+}
+
+.cards {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.card__supervisor {
+    border-top: 5px solid var(--supervisor);
+}
+
+.card__teambuilder {
+    border-top: 5px solid var(--teambuilder);
+}
+
+.card__karma {
+    border-top: 5px solid var(--karma);
+}
+
+.card__calculator {
+    border-top: 5px solid var(--calculator);
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    header h2, header h1 {
+        font-size: 1.5rem;
+    }
+}
